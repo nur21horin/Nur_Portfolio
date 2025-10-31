@@ -5,39 +5,39 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "GreenNest Platform",
       description:
-        "A full-featured online shopping platform with user authentication, product management, cart functionality, and secure payment integration.",
-      tech: ["React", "Express.js", "MongoDB", "Stripe"],
-      liveLink: "#",
+        "A full-featured online flower platform with user authentication, product management, cart functionality",
+      tech: ["React", "Firebase", "TailwindCSS", "DaisyUi"],
+      liveLink: "https://greennestplantsproject.netlify.app/",
+      githubLink: "https://github.com/programming-hero-web-course-4/b12a7-customer-support-zone-nur21horin",
+      gradient: "from-cyan-400/30 to-blue-500/30",
+    },
+    {
+      title: "Hero.IO App",
+      description:
+        "A modern web application for discovering , browsing , and managing top mobile and web apps. ##TechNology Built with **React +Vite ** and also Tailwindcss + DaisyUi ** along with ** React-Router + Toastify",
+      tech: ["React", "React ROuter", "Tailwind CSS", "DaisyUI"],
+      liveLink: "https://aloio.netlify.app/allapps",
+      githubLink: "https://github.com/nur21horin/B12-A08-Hero-Apps",
+      gradient: "from-cyan-400/30 to-blue-500/30",
+    },
+    {
+      title: "IELTS Master Platform",
+      description:
+        "IELTS Master Platform is a comprehensive web application designed to help users prepare for the IELTS exam effectively. Built using Express.js and MongoDB",
+      tech: ["React", "Express.js", "MongoDB"],
+      liveLink: "https://ieltsmaster9.netlify.app/",
       githubLink: "#",
       gradient: "from-cyan-400/30 to-blue-500/30",
     },
     {
-      title: "Task Management App",
+      title: "Sushi Shop",
       description:
-        "Collaborative task management application with real-time updates, team workspaces, and productivity analytics dashboard.",
-      tech: ["React", "Firebase", "Tailwind CSS", "DaisyUI"],
-      liveLink: "#",
-      githubLink: "#",
-      gradient: "from-cyan-400/30 to-blue-500/30",
-    },
-    {
-      title: "Blog Platform",
-      description:
-        "Modern blogging platform with rich text editor, comment system, user profiles, and social sharing capabilities.",
-      tech: ["React", "Express.js", "MongoDB", "JWT"],
-      liveLink: "#",
-      githubLink: "#",
-      gradient: "from-cyan-400/30 to-blue-500/30",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "Interactive weather application providing real-time weather data, forecasts, and beautiful data visualizations.",
-      tech: ["React", "REST API", "Chart.js", "Tailwind"],
-      liveLink: "#",
-      githubLink: "#",
+        "Sakura Sushi Website – A modern, responsive web application showcasing a sushi restaurant. Built with HTML, CSS, and JavaScript, the site features an interactive menu, engaging UI elements, and smooth navigation. ",
+      tech: ["JavaScript","CSS","HTMl"],
+      liveLink: "https://sushishopbd.netlify.app/",
+      githubLink: "https://github.com/nur21horin/Sushi_Themed",
       gradient: "from-cyan-400/30 to-blue-500/30",
     },
   ];

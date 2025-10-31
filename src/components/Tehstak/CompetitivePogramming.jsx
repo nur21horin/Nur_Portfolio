@@ -18,16 +18,16 @@ const platforms = [
     name: "CodeChef",
     description: "Active problem solver with consistent participation",
     stats: [
-      { label: "Problems Solved", value: "150+" },
-      { label: "Max Rating", value: "★★★" },
+      { label: "Problems Solved", value: "260+" },
+      { label: "Max Rating", value: "*" },
     ],
   },
   {
     name: "Codeforces",
     description: "Regular contest participant and problem solver",
     stats: [
-      { label: "Problems Solved", value: "200+" },
-      { label: "Rating", value: "Specialist" },
+      { label: "Problems Solved", value: "170+" },
+      { label: "Rating", value: "newbie" },
     ],
   },
 ];
