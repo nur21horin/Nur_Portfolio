@@ -32,13 +32,13 @@ const Contact = () => {
       )
       .then(
         () => {
-          toast.success("✅ Message sent successfully!");
+          toast.success(" Message sent successfully!");
           setFormData({ name: "", email: "", message: "" });
           setIsSubmitting(false);
         },
         (error) => {
           console.error(error);
-          toast.error("❌ Failed to send message. Please try again.");
+          toast.error(" Failed to send message. Please try again.");
           setIsSubmitting(false);
         }
       );
@@ -46,7 +46,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
-    { icon: Mail, label: "Email", value: "nur98371@gmail.com" },
+    { icon: Mail, label: "Email", value: "nurm98371@gmail.com" },
     { icon: Phone, label: "Phone", value: "+880 132 152 6442" },
   ];
 
@@ -84,7 +84,7 @@ const Contact = () => {
                 <input
                   name="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Nur Mohammod"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -99,7 +99,7 @@ const Contact = () => {
                 <input
                   name="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="nur@example.com"
                   value={formData.email}
                   onChange={handleChange}
                   required

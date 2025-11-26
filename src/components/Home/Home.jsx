@@ -16,19 +16,18 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 text-white">
-      <Navbar />
-
+      
       <main className="flex-grow">
-        {/* <Hero />
+        <Hero />
         <About />
         <CompetitiveProgramming />
         <Skills />
         <Projects />
         <Message />
-        <Contact /> */}
-        <Outlet />
+        <Contact />
+      
       </main>
-      <Footer />
+     
     </div>
   );
 };

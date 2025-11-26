@@ -14,15 +14,17 @@ import CompetitiveProgramming from "./components/Tehstak/CompetitivePogramming.j
 import Hero from "./components/Home/Hero.jsx";
 import { ErrorIcon } from "react-hot-toast";
 import ErrorPage from "./Page/ErrorPage.jsx";
+import RootLayout from "./RootLayout/RootLayout.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <RootLayout/>,
+    errorElement:<ErrorPage/>,
     children: [
       {
         index: true,
-        element: <Hero />,
+        element: <Home/>,
       },
       {
         path: "works",
@@ -45,14 +47,6 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
     ],
-  },
-  {
-    path: "/footer",
-    element: <Footer />,
-  },
-  {
-    path:"*",
-    element:<ErrorPage/>,
   }
 ]);
 

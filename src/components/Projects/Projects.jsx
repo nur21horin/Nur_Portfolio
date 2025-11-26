@@ -5,12 +5,30 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
+      title: "PlateShare – Community Food Sharing",
+      description:
+        "A MERN-based community food-sharing platform where users can donate surplus food, request items, manage their contributions, and help reduce food waste. Includes authentication, dashboard features, and a fully responsive UI.",
+      tech: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Firebase Auth",
+        "TailwindCSS",
+        "DaisyUI",
+      ],
+      liveLink: "https://dazzling-babka-75b8f8.netlify.app/",
+      githubLink: "https://github.com/nur21horin/Assingment10",
+      gradient: "from-green-400/30 to-emerald-600/30",
+    },
+    {
       title: "GreenNest Platform",
       description:
         "A full-featured online flower platform with user authentication, product management, cart functionality",
       tech: ["React", "Firebase", "TailwindCSS", "DaisyUi"],
       liveLink: "https://greennestplantsproject.netlify.app/",
-      githubLink: "https://github.com/programming-hero-web-course-4/b12a7-customer-support-zone-nur21horin",
+      githubLink:
+        "https://github.com/programming-hero-web-course-4/b12a7-customer-support-zone-nur21horin",
       gradient: "from-cyan-400/30 to-blue-500/30",
     },
     {
@@ -35,10 +53,19 @@ const Projects = () => {
       title: "Sushi Shop",
       description:
         "Sakura Sushi Website – A modern, responsive web application showcasing a sushi restaurant. Built with HTML, CSS, and JavaScript, the site features an interactive menu, engaging UI elements, and smooth navigation. ",
-      tech: ["JavaScript","CSS","HTMl"],
+      tech: ["JavaScript", "CSS", "HTMl"],
       liveLink: "https://sushishopbd.netlify.app/",
       githubLink: "https://github.com/nur21horin/Sushi_Themed",
       gradient: "from-cyan-400/30 to-blue-500/30",
+    },
+    {
+      title: "Emergency Service Directory – Bangladesh Govt",
+      description:
+        "A responsive emergency service directory that lists essential national helplines such as police, fire service, ambulance, women & child support, electricity, railway, and NGO services. Users can instantly copy or call helpline numbers. Built with a clean UI inspired by Bangladesh Government service portals.",
+      tech: ["HTML", "CSS", "JavaScript", "Responsive UI", "Gov Style UI"],
+      liveLink: "https://nur21horin.github.io/Assingment-3/",
+      githubLink: "https://github.com/nur21horin/Assingment-3",
+      gradient: "from-red-400/30 to-yellow-500/30",
     },
   ];
 
@@ -54,7 +81,11 @@ const Projects = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
@@ -77,7 +108,8 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mb-4" />
           <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            A showcase of my full-stack web development projects built with modern technologies.
+            A showcase of my full-stack web development projects built with
+            modern technologies.
           </p>
         </motion.div>
 
