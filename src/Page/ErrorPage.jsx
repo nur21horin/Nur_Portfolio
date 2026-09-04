@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
+import "./ErrorPage.css";
 
 const ErrorPage = () => {
   return (

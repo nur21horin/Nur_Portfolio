@@ -1,5 +1,6 @@
 import React from "react";
 import { Code2, Zap } from "lucide-react";
+import "./Message.css";
 
 const Message = () => {
   return (

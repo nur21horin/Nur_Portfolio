@@ -1,0 +1,183 @@
+.github {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--bg) 96%, #10100d 4%);
+}
+
+.github::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 18% 20%,
+      color-mix(in srgb, var(--acid) 20%, transparent),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 82% 100%,
+      color-mix(in srgb, var(--acid) 14%, transparent),
+      transparent 26%
+    );
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.github > * {
+  position: relative;
+  z-index: 1;
+}
+
+.github > div {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.github > div > p {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 390px;
+  margin: 0;
+}
+
+.github h2 {
+  margin: 0;
+}
+
+.github .primary {
+  justify-self: start;
+}
+
+.panel {
+  position: relative;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    color-mix(in srgb, var(--acid) 9%, transparent),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: githubGlow 7s ease-in-out infinite;
+}
+
+.panel > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font: 11px "DM Mono";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.panel > div:first-child a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--acid);
+}
+
+.panel main {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 0.38rem;
+  padding: 1.2rem;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.panel i {
+  display: block;
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--line) 76%, transparent);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  opacity: 0.7;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.panel i:nth-child(3n) {
+  background: color-mix(in srgb, var(--acid) 34%, var(--line));
+}
+
+.panel i:nth-child(4n) {
+  background: color-mix(in srgb, var(--acid) 52%, var(--line));
+  opacity: 0.95;
+}
+
+.panel i:hover {
+  transform: scale(1.08);
+  opacity: 1;
+  background: var(--acid);
+}
+
+.panel footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.8rem 1.2rem;
+  padding: 1.1rem 1.2rem 1.3rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font: 11px "DM Mono";
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.panel footer b {
+  color: var(--ink);
+  font-size: 1.2rem;
+  letter-spacing: -0.05em;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@keyframes githubGlow {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (max-width: 900px) {
+  .github {
+    grid-template-columns: 1fr;
+  }
+
+  .github > div > p {
+    max-width: unset;
+  }
+
+  .panel footer {
+    justify-content: flex-start;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, Award, Target, Zap, Trophy } from "lucide-react";
 import Message from "../Home/Message";
+import "./CompetitivePogramming.css";
 
 const container = {
   hidden: { opacity: 0 },
@@ -87,7 +88,7 @@ const CompetitiveProgramming = () => {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {platforms.map((platform, index) => (
+          {platforms.map((platform) => (
             <motion.div
               key={platform.name}
               initial={{ opacity: 0, y: 20 }}

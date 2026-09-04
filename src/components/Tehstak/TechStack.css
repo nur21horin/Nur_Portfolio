@@ -1,0 +1,43 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  animation: marquee-left 25s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Second row moves in the opposite direction */
+.marquee-track-reverse {
+  animation-name: marquee-right;
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Optional: pause when mouse is over it */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}

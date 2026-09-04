@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbaar/Navbaar";
 import { Outlet } from "react-router";
 import Footer from "../components/Footer/Footer";
+import "./RootLayout.css";
 
 
 const RootLayout = () => {

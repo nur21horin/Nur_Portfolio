@@ -1,0 +1,23 @@
+.problem {
+  display: grid;
+  grid-template-columns: 0.45fr 0.8fr 1fr;
+  gap: 5vw;
+  align-items: end;
+  border-top: 1px solid var(--line);
+}
+.problem > div:last-child {
+  border-top: 1px solid var(--line);
+}
+.problem > div:last-child a {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  font: 11px "DM Mono";
+}
+@media (max-width: 800px) {
+  .problem {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}

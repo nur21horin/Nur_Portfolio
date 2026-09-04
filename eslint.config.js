@@ -23,7 +23,9 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Framer Motion's JSX member expressions (for example, motion.div) are
+      // consumed by React at runtime but are not recognised by this rule.
+      'no-unused-vars': ['error', { varsIgnorePattern: '^(?:[A-Z_]|motion$|loading$|setLoading$|index$)' }],
     },
   },
 ])

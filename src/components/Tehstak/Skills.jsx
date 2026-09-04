@@ -1,118 +1,67 @@
 import React from "react";
+import "./Skills.css";
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      category: "Frontend",
-      color: "from-cyan-400 to-blue-500",
-      skills: [
-        { name: "React.js", level: 90 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "DaisyUI", level: 85 },
-        { name: "JavaScript (ES6+)", level: 90 },
-        { name: "HTML5 / CSS3", level: 95 },
-      ],
-    },
-    {
-      category: "Backend",
-      color: "from-emerald-400 to-green-500",
-      skills: [
-        { name: "Express.js", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "Firebase", level: 85 },
-        { name: "REST APIs", level: 88 },
-        { name: "Node.js", level: 82 },
-      ],
-    },
-    {
-      category: "Programming",
-      color: "from-purple-400 to-pink-500",
-      skills: [
-        { name: "C++", level: 88 },
-        { name: "Java", level: 82 },
-        { name: "C", level: 80 },
-        { name: "JavaScript", level: 70 },
-        { name: "Python", level: 50 },
+  const stack = {
+    Frontend: ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS"],
+    Backend: ["Node.js", "Express.js", "Laravel"],
+    Database: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
+    "AI / Data": ["Python", "Machine Learning", "Scikit-learn", "LangChain", "Mistral AI", "Streamlit"],
+    Tools: ["Git", "VS Code", "Postman", "Vite"],
+  };
 
-      ],
-    },
-    {
-      category: "Tools & Others",
-      color: "from-orange-400 to-red-500",
-      skills: [
-        { name: "Git / GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "Vite", level: 88 },
-        { name: "Firebase Hosting", level: 85 },
-        { name: "Responsive Design", level: 92 },
-      ],
-    },
-  ];
+  const tickerOne = ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"];
+  const tickerTwo = ["Python", "Scikit-learn", "LangChain", "Mistral AI", "Streamlit", "Git", "Postman", "Vite"];
 
   return (
-    <section
-      id="skills"
-      className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white"
-    >
-      {/* glowing background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-transparent pointer-events-none"></div>
+    <section id="skills" className="skills-section">
+      <div className="skills-header">
+        <p className="label">( 04 — TECH STACK )</p>
+        <h2>
+          TOOLS I USE
+          <br />
+          TO <i>THINK &amp; BUILD.</i>
+        </h2>
+      </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-            Skills & Expertise
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            A comprehensive skill set spanning frontend, backend, and
-            algorithmic problem-solving — built through practical projects and
-            hands-on experience.
-          </p>
-        </div>
-
-        {/* Skill Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, i) => (
-            <div
-              key={i}
-              className="p-6 md:p-8 rounded-2xl border border-cyan-500/10 bg-slate-800/60 backdrop-blur shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${i * 0.15}s` }}
-            >
-              <h3 className="text-2xl font-bold font-display mb-6 flex items-center gap-3">
-                <span
-                  className={`w-2 h-8 rounded-full bg-gradient-to-b ${category.color}`}
-                ></span>
-                {category.category}
-              </h3>
-
-              <div className="space-y-5">
-                {category.skills.map((skill, j) => (
-                  <div key={j}>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-gray-200">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm text-gray-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-
-                    <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                      <div
-                        className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out`}
-                        style={{
-                          width: `${skill.level}%`,
-                          transitionDelay: `${i * 0.1 + j * 0.05}s`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
+      <div className="marquee-wrapper">
+        <div className="marquee">
+          <div className="marquee-track">
+            {[...tickerOne, ...tickerOne].map((x, i) => (
+              <div className="glass-card" key={`t1-${x}-${i}`}>
+                <span className="card-index">{String((i % tickerOne.length) + 1).padStart(2, "0")}</span>
+                <span className="card-name">{x}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        <div className="marquee marquee-reverse">
+          <div className="marquee-track">
+            {[...tickerTwo, ...tickerTwo].map((x, i) => (
+              <div className="glass-card" key={`t2-${x}-${i}`}>
+                <span className="card-index">{String((i % tickerTwo.length) + 1).padStart(2, "0")}</span>
+                <span className="card-name">{x}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="stack-index">
+        {Object.entries(stack).map(([category, items]) => (
+          <div className="index-row" key={category}>
+            <div className="index-meta">
+              <span className="index-category">{category}</span>
+              <span className="index-count">{String(items.length).padStart(2, "0")} tools</span>
+            </div>
+            <div className="index-items">
+              {items.map((item) => (
+                <span className="index-item" key={item}>{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

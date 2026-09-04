@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "./LoadingPage.css";
 
 const LoadingPage = ({ onFinish }) => {
   useEffect(() => {

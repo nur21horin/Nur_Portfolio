@@ -4,12 +4,14 @@ import Hero from "./Hero";
 import Skills from "../Tehstak/Skills";
 import Footer from "../Footer/Footer";
 import CompetitiveProgramming from "../Tehstak/CompetitivePogramming";
+import TechStack from "../Tehstak/TechStack";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import Message from "./Message";
 import Contact from "../Contacts/Contacts";
 import { Outlet } from "react-router";
 import LoadingPage from "../../Page/LoadingPage";
+import "./Home.css";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -22,6 +24,7 @@ const Home = () => {
         <About />
         <CompetitiveProgramming />
         <Skills />
+        <TechStack />
         <Projects />
         <Message />
         <Contact />
